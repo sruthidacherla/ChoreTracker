@@ -30,7 +30,14 @@ function addChore() {
 
 }
 
-
+// Toggle the 'completed' class when the checkbox is clicked
+function toggleChore(checkbox) {
+    
+    let listItem = checkbox.parentElement; // Get the parent <li> element
+    
+    listItem.classList.toggle('completed'); // Toggle the 'completed' class
+    
+}
 
 // Save chores to local storage
 
