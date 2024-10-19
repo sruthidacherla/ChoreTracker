@@ -57,6 +57,7 @@ function saveChore(chore) {
 
 window.onload = function() {
 
+    localStorage.removeItem('chores');
     let storedChores = JSON.parse(localStorage.getItem('chores')) || [];
 
     storedChores.forEach(chore => addChoreToDOM(chore));
