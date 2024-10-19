@@ -1,30 +1,30 @@
-// Add a habit to the list
+// Add a chore to the list
 
-function addHabit() {
+function addChore() {
 
-    let habitInput = document.getElementById('habitInput').value;
+    let choreInput = document.getElementById('choreInput').value;
 
-    if (habitInput) {
+    if (choreInput) {
 
-        let habitList = document.getElementById('habitList');
+        let choreList = document.getElementById('choreList');
 
-        let newHabit = document.createElement('li');
+        let newChore = document.createElement('li');
 
-        newHabit.innerHTML = `<input type="checkbox"> ${habitInput}`;
+        newChore.innerHTML = `<input type="checkbox"> ${choreInput}`;
 
-        habitList.appendChild(newHabit);
-
-
-
-        // Save habit to local storage
-
-        saveHabit(habitInput);
+        choreList.appendChild(newChore);
 
 
 
-        // Clear input field after adding habit
+        // Save chore to local storage
 
-        document.getElementById('habitInput').value = '';
+        saveChore(choreInput);
+
+
+
+        // Clear input field after adding chore
+
+        document.getElementById('choreInput').value = '';
 
     }
 
@@ -32,42 +32,42 @@ function addHabit() {
 
 
 
-// Save habits to local storage
+// Save chores to local storage
 
-function saveHabit(habit) {
+function saveChore(chore) {
 
-    let storedHabits = JSON.parse(localStorage.getItem('habits')) || [];
+    let storedChore = JSON.parse(localStorage.getItem('chores')) || [];
 
-    storedHabits.push(habit);
+    storedChores.push(chore);
 
-    localStorage.setItem('habits', JSON.stringify(storedHabits));
+    localStorage.setItem('chores', JSON.stringify(storedChores));
 
 }
 
 
 
-// Load habits from local storage on page load
+// Load chores from local storage on page load
 
 window.onload = function() {
 
-    let storedHabits = JSON.parse(localStorage.getItem('habits')) || [];
+    let storedChores = JSON.parse(localStorage.getItem('chores')) || [];
 
-    storedHabits.forEach(habit => addHabitToDOM(habit));
+    storedChores.forEach(chore => addChoreToDOM(chore));
 
 }
 
 
 
-// Helper function to add habits to the DOM
+// Helper function to add chores to the DOM
 
-function addHabitToDOM(habit) {
+function addChoreToDOM(chore) {
 
-    let habitList = document.getElementById('habitList');
+    let choreList = document.getElementById('choreList');
 
-    let newHabit = document.createElement('li');
+    let newChore = document.createElement('li');
 
-    newHabit.innerHTML = `<input type="checkbox"> ${habit}`;
+    newChore.innerHTML = `<input type="checkbox"> ${chore}`;
 
-    habitList.appendChild(newHabit);
+    choresList.appendChild(newChore);
 
 } 
