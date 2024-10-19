@@ -43,7 +43,7 @@ function toggleChore(checkbox) {
 
 function saveChore(chore) {
 
-    let storedChore = JSON.parse(localStorage.getItem('chores')) || [];
+    let storedChores = JSON.parse(localStorage.getItem('chores')) || [];
 
     storedChores.push(chore);
 
@@ -75,6 +75,6 @@ function addChoreToDOM(chore) {
 
     newChore.innerHTML = `<input type="checkbox"> ${chore}`;
 
-    choresList.appendChild(newChore);
+    choreList.appendChild(newChore);
 
 } 
