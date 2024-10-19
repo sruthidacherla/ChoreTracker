@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"> //document is in english
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Chore Logger!</title>
+    //open style
+    <style>
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        ul { //unorderedlist
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li { //listitem
+            margin: 5px 0;
+        }
+    </style>
+    //close style
+
+</head>
+//close head
+
+<body>
+
+    <h1>Simple Chore Logger!</h1> //page heading
+    <input type="text" id="choreInput" placeholder="enter a chore"> //to enter chore
+    <button onclick="addChore()">Add Chore</button> //button for adding a chore
+    <ul id="choreList"></ul> //unordered list displaying chores
+
+    <script src="app.js"></script>
+
+</body>
+//close body
+</html>
+//close html
