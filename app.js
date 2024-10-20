@@ -41,11 +41,13 @@ function saveChore(chore) {
 
 // Load chores from local storage on page load
 window.onload = function() {
-    //Get the chores from local storage, or initialize an empty array
     let storedChores = JSON.parse(localStorage.getItem('chores')) || [];
-    //Loop through the array and add each one to the DOM
-    storedChores.forEach(choreObj => addChoreToDOM(choreObj.chore, choreObj.completed));
-
+    // Filter out completed chores
+    let incompleteChores = storedChores.filter(choreObj => !choreObj.completed);
+    // Save only incomplete chores back to local storage
+    localStorage.setItem('chores', JSON.stringify(incompleteChores));
+    // Add incomplete chores to the DOM
+    incompleteChores.forEach(choreObj => addChoreToDOM(choreObj.chore, choreObj.completed));
 }
 
 
