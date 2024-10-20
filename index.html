@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Simple Chore Logger!</title>
     <style>
-
+    /* Styling for the body element */
         body {
             font-family: "Times New Roman", Times, serif;
             text-align: center;
@@ -12,13 +12,13 @@
             background-color: #f4f4f9;
             color: #333;
         }
-
+        /* Style for input fields and buttons */
         input, button {
             padding: 10px;
             margin: 10px;
             font-size: 16px;
         }
-
+        /* Style for the button element */
         button {
             background-color: #5cb85c;
             color: white;
@@ -29,35 +29,35 @@
             font-size: 16px;
             border-radius: 5px;
         }
-
+        /* Change the background color when hovering over the button */
         button:hover {
-            background-color: #4cae4c;
+            background-color: #4cae4c; 
         }
-
+        /* Style for the unordered list */
         ul { //unorderedlist
             list-style-type: none;
             padding: 0;
         }
-
+        /* Style for each list item*/
         li { //listitem
             margin: 5px 0;
             font-size: 18px;
         }
-
+        /* Style for the checkboxes inside each list item */
         li input[type="checkbox"] {
             margin-right: 10px;
         }
-
+        /* Style for the main heading*/
         h1 {
             font-size: 2.5em;
             color: #4cae4c;
         }
-
+        /* Style for chores marked as completed */
         .completed {
             text-decoration: line-through;
             color: gray;
         }
-
+        /* Style for the image on the left */
         img.left {
             float: left;
             width: 250px;
@@ -66,7 +66,7 @@
             margin-right: 20px;
         }
 
-
+        /* Style for the image on the right */
         img.right {
             float: right;
             width: 250px;
@@ -80,16 +80,20 @@
 </head>
 
 <body>
-
+    
+<!-- Main heading for the chore logger -->
 <h1>Simple Chore Logger!</h1>
-
+<!-- Left image showing a dishwashing chore -->
 <img class="left" src="https://img.freepik.com/free-vector/woman-doing-dish_1308-71022.jpg?w=1060&t=st=1729364340~exp=1729364940~hmac=9a968e29623776b20ec6debe9c8c7190629b3dfd45e6cea108adf365df0479c4" alt="Dishes Chore Image">
+<!-- Right image showing a trash chore -->
 <img class="right" src="https://img.freepik.com/premium-vector/man-taking-out-trash-bag-repairman-throwing-garbage-vector-illustration_533410-435.jpg?w=1060" alt="Taking Out Trash Image">
-
+<!-- Input field for entering a new chore -->
 <input type="text" id="choreInput" placeholder="Enter a chore">
+<!-- Button to add the chore to the list -->
 <button onclick="addChore()">Add Chore</button> 
+<!-- Unordered list to display the list of chores -->
 <ul id="choreList"></ul> 
-
+<!-- Link to app.js -->
 <script src="app.js"></script>
 
 </body>
